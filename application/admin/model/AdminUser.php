@@ -118,4 +118,9 @@ class AdminUser extends Model
       self::name('admin_user')->insert($data);
     });
   }
+
+  public function getAdmimUserInfo($adminName)
+  {
+    return $this->where('name', $adminName)->find();
+  }
 }
